@@ -34,5 +34,7 @@ out/
 gen
 
 # GitHub
+README.md
 readme.md
 !/readme.md
+!/README.md
