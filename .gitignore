@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### BoyirenJava template
+# DataBase
+*.db
+*.sql
+
 # Compiled class file
 *.class
 
