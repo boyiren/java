@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="entity">
+    <select id="listPolicyType" resultMap="PolicyTypeBean">
+        select a.*, b.*, a.id 'aid', b.id 'bid', a.name 'aname', b.name 'bname' from PolicyType a left join Policy b on a.id = b.typeId;
+    </select>
+    <resultMap id="PolicyTypeBean" type="PolicyType">
+        <id column="aid" property="id"/>
+        <result column="aname" property="name"/>
+
+        <!-- 一对多的关系 -->
+        <!-- property: 指的是集合属性的值, ofType：指的是集合中元素的类型 -->
+        <collection property="policies" ofType="Policy">
+            <id column="bid" property="id"/>
+            <result column="bnumber" property="number"/>
+            <result column="bname" property="name"/>
+            <result column="btypeId" property="typeId"/>
+        </collection>
+    </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="entity">
+    <insert id="addPolicy" parameterType="Policy">
+        insert into Policy(id, number, name, typeId) values (#{id}, #{number}, #{name}, #{typeId})
+    </insert>
+    <delete id="deletePolicy" parameterType="Policy">
+        delete from Policy where id=#{id}
+    </delete>
+    <update id="updatePolicy" parameterType="Policy">
+        update Policy set name=#{name} where id=#{id}
+    </update>
+    <select id="listPolicy" resultType="Policy">
+        select * from Policy
+    </select>
+    <select id="selectByName" resultType="policy">
+        select * from Policy where name like '%'||#{name}||'%'
+    </select>
+    <select id="selectByNoAndName" resultType="policy">
+        select * from Policy where number>#{number} and name like '%'||#{name}||'%'
+    </select>
+</mapper>

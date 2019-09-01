@@ -8,8 +8,12 @@ package entity;
  */
 public class Policy {
     private int id;
-    private String policyNo;
+    private String number;
     private String name;
+    private int typeId;
+
+    public Policy() {
+    }
 
     public int getId() {
         return id;
@@ -19,12 +23,12 @@ public class Policy {
         this.id = id;
     }
 
-    public String getPolicyNo() {
-        return policyNo;
+    public String getNumber() {
+        return number;
     }
 
-    public void setPolicyNo(String policyNo) {
-        this.policyNo = policyNo;
+    public void setNumber(String policyNo) {
+        this.number = policyNo;
     }
 
     public String getName() {
@@ -33,5 +37,18 @@ public class Policy {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
+    }
+
+    @Override
+    public String toString() {
+        return "Policy[id=" + this.id + ", number=" + this.number + ", name=" + this.name + ", typeId=" + this.typeId + "]";
     }
 }
