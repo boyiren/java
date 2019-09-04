@@ -11,6 +11,7 @@ public class Policy {
     private String number;
     private String name;
     private int typeId;
+    private PolicyType policyType;
 
     public Policy() {
     }
@@ -45,6 +46,14 @@ public class Policy {
 
     public void setTypeId(int typeId) {
         this.typeId = typeId;
+    }
+
+    public PolicyType getPolicyType() {
+        return policyType;
+    }
+
+    public void setPolicyType(PolicyType policyType) {
+        this.policyType = policyType;
     }
 
     @Override

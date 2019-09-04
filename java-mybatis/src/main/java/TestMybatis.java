@@ -77,6 +77,14 @@ public class TestMybatis {
                 }
             }
 
+            // 多对一查询
+            System.out.println("--------------------------");
+            System.out.println("多对一查询：");
+            List<Policy> policies3 = session.selectList("listPolicyWithPolicyType");
+            for (Policy policy : policies3) {
+                System.out.println(policy + "\t对应的分类是\t" + policy.getPolicyType());
+            }
+
             session.commit();
             session.close();
 

@@ -4,22 +4,43 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="entity">
-    <insert id="addPolicy" parameterType="Policy">
+    <insert id="addPolicy" parameterType="entity.Policy">
         insert into Policy(id, number, name, typeId) values (#{id}, #{number}, #{name}, #{typeId})
     </insert>
-    <delete id="deletePolicy" parameterType="Policy">
+
+    <delete id="deletePolicy" parameterType="entity.Policy">
         delete from Policy where id=#{id}
     </delete>
-    <update id="updatePolicy" parameterType="Policy">
+
+    <update id="updatePolicy" parameterType="entity.Policy">
         update Policy set name=#{name} where id=#{id}
     </update>
-    <select id="listPolicy" resultType="Policy">
+
+    <select id="listPolicy" resultType="entity.Policy">
         select * from Policy
     </select>
-    <select id="selectByName" resultType="policy">
+
+    <select id="selectByName" resultType="entity.Policy">
         select * from Policy where name like '%'||#{name}||'%'
     </select>
-    <select id="selectByNoAndName" resultType="policy">
+
+    <select id="selectByNoAndName" resultType="entity.Policy">
         select * from Policy where number>#{number} and name like '%'||#{name}||'%'
     </select>
+
+    <select id="listPolicyWithPolicyType" resultMap="policyWithPolicyType">
+        select a.*, b.*, a.id 'aid', b.id 'bid', a.name 'aname', b.name 'bname'
+        from Policy a left join PolicyType b on a.typeId = b.id
+    </select>
+    <resultMap id="policyWithPolicyType" type="Policy">
+        <id column="aid" property="id"/>
+        <result column="number" property="number"/>
+        <result column="aname" property="name"/>
+        <result column="typeId" property="typeId"/>
+
+        <association property="policyType" javaType="PolicyType">
+            <id column="bid" property="id"/>
+            <result column="bname" property="name"/>
+        </association>
+    </resultMap>
 </mapper>
