@@ -17,6 +17,8 @@
     </environments>
     <mappers>
         <mapper resource="mapper/Policy.xml"/>
-        <mapper resource="mapper/PolicyType.xml" />
+        <mapper resource="mapper/PolicyType.xml"/>
+        <mapper resource="mapper/PolicyOrder.xml"/>
+        <mapper resource="mapper/OrderItem.xml"/>
     </mappers>
 </configuration>

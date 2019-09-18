@@ -1,4 +1,6 @@
+import entity.OrderItem;
 import entity.Policy;
+import entity.PolicyOrder;
 import entity.PolicyType;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -69,7 +71,7 @@ public class TestMybatis {
             System.out.println("--------------------------");
             System.out.println("一对多查询：");
             List<PolicyType> policyTypes = session.selectList("listPolicyType");
-            for(PolicyType policyType : policyTypes) {
+            for (PolicyType policyType : policyTypes) {
                 System.out.println(policyType);
                 List<Policy> policies3 = policyType.getPolicies();
                 for (Policy policy : policies3) {
@@ -83,6 +85,19 @@ public class TestMybatis {
             List<Policy> policies3 = session.selectList("listPolicyWithPolicyType");
             for (Policy policy : policies3) {
                 System.out.println(policy + "\t对应的分类是\t" + policy.getPolicyType());
+            }
+
+            // 多对多查询
+            System.out.println("--------------------------");
+            System.out.println("多对多查询：");
+            List<PolicyOrder> policyOrders = session.selectList("listPolicyOrder");
+            for (PolicyOrder policyOrder : policyOrders) {
+                System.out.println(policyOrder.getCode());
+                List<OrderItem> orderItems = policyOrder.getOrderItems();
+                for (OrderItem orderItem : orderItems) {
+                    System.out.format("\t%s\t%d%n",
+                            orderItem.getPolicy().getName(), orderItem.getNumber());
+                }
             }
 
             session.commit();
