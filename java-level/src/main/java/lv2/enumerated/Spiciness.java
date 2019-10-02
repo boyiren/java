@@ -1,4 +1,4 @@
-package lv2.enumeration;
+package lv2.enumerated;
 
 /**
  * 辛辣程度 枚举

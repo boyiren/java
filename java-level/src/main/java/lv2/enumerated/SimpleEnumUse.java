@@ -1,4 +1,4 @@
-package lv2.enumeration;
+package lv2.enumerated;
 
 /**
  * @author boyiren
