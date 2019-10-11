@@ -15,6 +15,7 @@
         <module>java-mybatis</module>
         <module>java-level</module>
         <module>java-api</module>
+        <module>quartz</module>
     </modules>
 
     <properties>
