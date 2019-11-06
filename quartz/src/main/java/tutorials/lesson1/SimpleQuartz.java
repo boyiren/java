@@ -1,5 +1,6 @@
 package tutorials.lesson1;
 
+import job.HelloJob;
 import org.quartz.*;
 
 import static org.quartz.JobBuilder.newJob;

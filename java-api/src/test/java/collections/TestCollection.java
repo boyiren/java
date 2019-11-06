@@ -1,4 +1,4 @@
-package Collection;
+package collections;
 
 import org.junit.Test;
 

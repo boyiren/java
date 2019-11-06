@@ -16,6 +16,7 @@
         <module>java-level</module>
         <module>java-api</module>
         <module>quartz</module>
+        <module>java-data-structures</module>
     </modules>
 
     <properties>

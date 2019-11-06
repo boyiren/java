@@ -1,4 +1,4 @@
-package tutorials.lesson1;
+package job;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;

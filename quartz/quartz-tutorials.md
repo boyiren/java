@@ -46,3 +46,57 @@ sched.scheduleJob(job, trigger);
 
 Scheduler 可以添加，移除、列举 Jobs 和 Triggers。
 
+
+
+## [Lesson 3: More About Jobs & JobDetails](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-03.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 4: More About Triggers](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-04.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+### Common Trigger Attributes
+
+### Priority
+
+### Misfire Instructions
+
+### Calendars
+
+**The Calendar Interface**
+
+**Calendar Example**
+
+## [Lesson 5: SimpleTriggers](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-05.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 6: CronTriggers](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-06.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 7: TriggerListeners & JobListeners](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-07.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 8: SchedulerListeners](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-08.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 9: JobStores](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-09.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 10: Configuration, Resource Usage and SchedulerFactory](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-10.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 11: Advanced (Enterprise) Features](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-11.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+
+## [Lesson 12: Miscellaneous Features](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-12.html)
+
+不做翻译，以下内容主要对原文档做点简单笔记，方便回顾本节原内容。
+

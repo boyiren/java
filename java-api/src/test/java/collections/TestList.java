@@ -1,4 +1,4 @@
-package Collection;
+package collections;
 
 /**
  * 测试 List API
